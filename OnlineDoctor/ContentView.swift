@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var onboardinDone = false
+    var data = OnboardingDataModel.data
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Group {
+            if !onboardinDone {
+                OnboardingViewPure(data: data, doneFunction: {
+                    /// Update your state here
+                    self.onboardinDone = true
+                    print("done onboarding")
+                })
+            } else {
+                SignInView()
+            }
+        }
     }
 }
 
