@@ -37,6 +37,9 @@
 		AACDA2D026A553D800779192 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACDA2CF26A553D800779192 /* SignInView.swift */; };
 		AACDA2D326A55C4000779192 /* TextFieldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACDA2D226A55C4000779192 /* TextFieldButton.swift */; };
 		AAF0FFD926A58E2900EE17BE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFD826A58E2900EE17BE /* HomeView.swift */; };
+		AAF0FFDC26A5A39700EE17BE /* LoginComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFDB26A5A39700EE17BE /* LoginComponent.swift */; };
+		AAF0FFDF26A5A5D900EE17BE /* FingerPrintSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFDE26A5A5D900EE17BE /* FingerPrintSheetView.swift */; };
+		AAF0FFE326A5DFFA00EE17BE /* CustomCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFE226A5DFFA00EE17BE /* CustomCircleProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		AACDA2CF26A553D800779192 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		AACDA2D226A55C4000779192 /* TextFieldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldButton.swift; sourceTree = "<group>"; };
 		AAF0FFD826A58E2900EE17BE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AAF0FFDB26A5A39700EE17BE /* LoginComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponent.swift; sourceTree = "<group>"; };
+		AAF0FFDE26A5A5D900EE17BE /* FingerPrintSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerPrintSheetView.swift; sourceTree = "<group>"; };
+		AAF0FFE226A5DFFA00EE17BE /* CustomCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,8 @@
 		AACDA2CE26A553B400779192 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AAF0FFDD26A5A5C700EE17BE /* Sheet View */,
+				AAF0FFDA26A5A34800EE17BE /* Component */,
 				AACDA2CF26A553D800779192 /* SignInView.swift */,
 				AAF0FFD826A58E2900EE17BE /* HomeView.swift */,
 			);
@@ -184,8 +192,25 @@
 			isa = PBXGroup;
 			children = (
 				AACDA2D226A55C4000779192 /* TextFieldButton.swift */,
+				AAF0FFE226A5DFFA00EE17BE /* CustomCircleProgressView.swift */,
 			);
 			path = Modifier;
+			sourceTree = "<group>";
+		};
+		AAF0FFDA26A5A34800EE17BE /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				AAF0FFDB26A5A39700EE17BE /* LoginComponent.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		AAF0FFDD26A5A5C700EE17BE /* Sheet View */ = {
+			isa = PBXGroup;
+			children = (
+				AAF0FFDE26A5A5D900EE17BE /* FingerPrintSheetView.swift */,
+			);
+			path = "Sheet View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,10 +306,13 @@
 				AACDA2D026A553D800779192 /* SignInView.swift in Sources */,
 				AACDA2A026A53E2D00779192 /* OnboardingStepView.swift in Sources */,
 				AACDA29F26A53E2D00779192 /* OnboardingViewPure.swift in Sources */,
+				AAF0FFDC26A5A39700EE17BE /* LoginComponent.swift in Sources */,
 				AACDA2A126A53E2D00779192 /* OnboardingDataModel.swift in Sources */,
 				AACDA2D326A55C4000779192 /* TextFieldButton.swift in Sources */,
 				AACDA2CD26A54E2000779192 /* view.swift in Sources */,
 				AACDA28326A49E3100779192 /* OnlineDoctorApp.swift in Sources */,
+				AAF0FFE326A5DFFA00EE17BE /* CustomCircleProgressView.swift in Sources */,
+				AAF0FFDF26A5A5D900EE17BE /* FingerPrintSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

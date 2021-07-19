@@ -11,67 +11,87 @@ struct SignInView: View {
 
     @State var email: String = "Ayahirano2014@126.com"
     @State var password: String = "aceace123"
+    @State var fingerShow: Bool = false
+    @State var navigateToHome: Bool = false
     
     var body: some View {
         
         NavigationView {
             
-            ZStack {
-                
-                Color(#colorLiteral(red: 0.9803921569, green: 0.9843137255, blue: 1, alpha: 1))
-                    .edgesIgnoringSafeArea(.all)
-                
-                VStack {
-                    Spacer()
+            GeometryReader { geometry in
+                ZStack {
                     
-                    /// Hey, Let's Sign in!
-                    SigninHeaderView()
-                    
-                    /// email and password textfield
-                    UserInputSignInView(email: $email, password: $password)
-                    
-                    HStack {
+                    Color(#colorLiteral(red: 0.9803921569, green: 0.9843137255, blue: 1, alpha: 1))
+                        .edgesIgnoringSafeArea(.all)
+                   
+                    if fingerShow {
+                        Color(#colorLiteral(red: 0.2, green: 0.2274509804, blue: 0.4941176471, alpha: 0.2958522569))
+                            .edgesIgnoringSafeArea(.all)
+                    }
+                    VStack {
                         Spacer()
-                        Text("Forgot Password?")
-                            .fontWeight(.light)
-                            .customFont(.subheadline)
-                    }
-                    .frame(width: 305)
-                    .padding(.top, 10)
-                    
-                    /// Log in Button with arrwo
-                    LoginButtonView()
-                        .padding(.top, 100)
-                    
-                    /// divider with text
-                    DividerWithTextView(text: " Or Login With ")
-                        .padding(.top, 25)
-                    
-                    /// log in with google
-                    LoginWithGoogleButton()
-                        .padding(.top, 25)
-                    
-                    /// Register tip info
-                    HStack {
-                        Text("Don't have an account?")
-                            .customFont(.subheadline)
-                            .foregroundColor(Color(#colorLiteral(red: 0.2039215686, green: 0.2235294118, blue: 0.3960784314, alpha: 1)))
                         
-                        NavigationLink(
-                            destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
-                            label: {
-                                Text("Register in here")
-                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                                    .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.6901960784, blue: 0.5843137255, alpha: 1)))
-                                    .customFont(.subheadline)
-                                
-                            })
+                        /// Hey, Let's Sign in!
+                        SigninHeaderView()
+                        
+                        /// email and password textfield
+                        UserInputSignInView(email: $email, password: $password, fingerShow: $fingerShow)
+                        
+                        HStack {
+                            Spacer()
+                            Text("Forgot Password?")
+                                .fontWeight(.light)
+                                .customFont(.subheadline)
+                        }
+                        .frame(width: 305)
+                        .padding(.top, 10)
+                        
+                        /// Log in Button with arrwo
+                        LoginButtonView()
+                            .padding(.top, 100)
+                        
+                        /// divider with text
+                        DividerWithTextView(text: " Or Login With ")
+                            .padding(.top, 25)
+                        
+                        /// log in with google
+                        LoginWithGoogleButton()
+                            .padding(.top, 25)
+                        
+                        /// Register tip info
+                        HStack {
+                            Text("Don't have an account?")
+                                .customFont(.subheadline)
+                                .foregroundColor(Color(#colorLiteral(red: 0.2039215686, green: 0.2235294118, blue: 0.3960784314, alpha: 1)))
+                            
+                            NavigationLink(
+                                destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                                isActive: $navigateToHome,
+                                label: {
+                                    Text("Register in here")
+                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                        .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.6901960784, blue: 0.5843137255, alpha: 1)))
+                                        .customFont(.subheadline)
+                                    
+                                })
+                            
+                        }
+                        .padding(.top, 13)
                     }
-                    .padding(.top, 13)
+                    .blur(radius: fingerShow ? 8.0 : 0.0)
+                    
+                    FingerPrintSheetView(
+                        fingerShow: self.$fingerShow,
+                        navigateToHome: self.$navigateToHome,
+                        maxHeight: geometry.size.height * 0.52
+                    ) {
+                        Color.blue
+                    }
+                 //   .edgesIgnoringSafeArea(.all)
                 }
+                .navigationBarHidden(true)
+                
             }
-            .navigationBarHidden(true)
-         //   .edgesIgnoringSafeArea(.all)
         }
        
     }
@@ -93,55 +113,15 @@ struct DividerWithTextView: View {
     }
 }
 
-struct LoginWithGoogleButton: View {
-    var body: some View {
-        
-        Button(action: {
-            
-        }, label: {
-            HStack(spacing: 0.0) {
-               
-                Image("google")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 18, height: 18, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                
-                Text("Login with Google")
-                    .customFont(.subheadline)
-                    .foregroundColor(.black)
-            }
-            .frame(width: 305, height: 50)
-            .background(Color.white)
-            .cornerRadius(25)
-            .overlay(
-                RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.gray, style: StrokeStyle(lineWidth: 0.8))
-                    .foregroundColor(.clear)
-                    
-            )
-        })
-    }
-}
-
 struct LoginButtonView: View {
     var body: some View {
-        Button(action: {
-            
-        }, label: {
-            HStack(spacing: 0.0) {
-                Text("Login")
-                    .customFont(.subheadline)
-                    .foregroundColor(.white)
-                Image(systemName: "arrow.right")
-                    .customFont(.subheadline)
-                    .foregroundColor(.white)
-            }
-            .frame(width: 305, height: 50)
-            .background(Color("main"))
-            .cornerRadius(25)
-            .shadow(radius: 25)
-        })
-       
+        
+        NavigationLink(
+            destination: HomeView(),
+            label: {
+                LoginButton()
+            })
+        
     }
 }
 
@@ -151,21 +131,6 @@ struct SignInView_Previews: PreviewProvider {
     }
 }
 
-struct FingerPrintView: View {
-    var body: some View {
-        ZStack {
-            Color(#colorLiteral(red: 0.1019607843, green: 0.6901960784, blue: 0.5843137255, alpha: 0.2015190882))
-                .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .clipShape(Circle())
-            
-            Image(systemName: "touchid")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 18, height: 18, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .foregroundColor(Color(#colorLiteral(red: 0.1019607843, green: 0.6901960784, blue: 0.5843137255, alpha: 1)))
-        }
-    }
-}
 
 struct SigninHeaderView: View {
     var body: some View {
@@ -188,68 +153,4 @@ struct SigninHeaderView: View {
     }
 }
 
-struct PasswordFieldView: View {
-    
-    @Binding var password: String
-    @State var showPassword: Bool = false
-    
-    var body: some View {
-        ZStack {
-            if !self.showPassword {
-                SecureField("Password", text: $password)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    
-                    .foregroundColor(.black)
-                    .modifier(TextFieldClearButton(text: $password, showPassword: $showPassword))
-                    .frame(width: 245, height: 50, alignment: .leading)
-                    .offset(x: 30)
-                    .fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                    .background(
-                        Color(#colorLiteral(red: 0.9254901961, green: 0.9490196078, blue: 1, alpha: 1))
-                            .clipShape(RoundedRectangle(cornerRadius: 100))
-                    )
-            } else {
-                TextField("Password", text: $password)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    
-                    .foregroundColor(.black)
-                    .modifier(TextFieldClearButton(text: $password, showPassword: $showPassword))
-                    .frame(width: 245, height: 50, alignment: .leading)
-                    .offset(x: 30)
-                    .fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                    .background(
-                        Color(#colorLiteral(red: 0.9254901961, green: 0.9490196078, blue: 1, alpha: 1))
-                            .clipShape(RoundedRectangle(cornerRadius: 100))
-                    )
-            }
-            
-        }
-    }
-}
 
-struct UserInputSignInView: View {
-    
-    @Binding var email: String
-    @Binding var password: String
-    
-    var body: some View {
-        VStack {
-            TextField("Email", text: $email)
-                .textFieldStyle(PlainTextFieldStyle())
-                .frame(width: 305, height: 50, alignment: .leading)
-                .offset(x: 30)
-                .foregroundColor(.black)
-                .background(
-                    Color(#colorLiteral(red: 0.9254901961, green: 0.9490196078, blue: 1, alpha: 1))
-                        .clipShape(RoundedRectangle(cornerRadius: 100))
-                )
-                .padding(.bottom, 15)
-            
-            HStack {
-                PasswordFieldView(password: $password)
-                
-                FingerPrintView()
-            }
-        }
-    }
-}
