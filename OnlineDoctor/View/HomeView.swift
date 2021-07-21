@@ -9,7 +9,13 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Home View")
+        NavigationView {
+            
+            NavigationLink("to other view", destination: SubHomeView())
+                .navigationBarHidden(true)
+        }
+        .CustomNavigationButtonStyle()
+        .navigationBarHidden(true)
     }
 }
 

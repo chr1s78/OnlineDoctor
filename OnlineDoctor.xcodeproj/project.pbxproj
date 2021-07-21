@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0D978126A8497800082A03 /* VerificationCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0D978026A8497800082A03 /* VerificationCodeViewModel.swift */; };
+		AA0D978426A849A900082A03 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = AA0D978326A849A900082A03 /* SwiftUIX */; };
+		AA0D978D26A859F700082A03 /* SubHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0D978C26A859F700082A03 /* SubHomeView.swift */; };
 		AACDA28326A49E3100779192 /* OnlineDoctorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACDA28226A49E3100779192 /* OnlineDoctorApp.swift */; };
 		AACDA28526A49E3100779192 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACDA28426A49E3100779192 /* ContentView.swift */; };
 		AACDA28726A49E3400779192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AACDA28626A49E3400779192 /* Assets.xcassets */; };
@@ -40,15 +43,21 @@
 		AAF0FFDC26A5A39700EE17BE /* LoginComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFDB26A5A39700EE17BE /* LoginComponent.swift */; };
 		AAF0FFDF26A5A5D900EE17BE /* FingerPrintSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFDE26A5A5D900EE17BE /* FingerPrintSheetView.swift */; };
 		AAF0FFE326A5DFFA00EE17BE /* CustomCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFE226A5DFFA00EE17BE /* CustomCircleProgressView.swift */; };
+		AAF0FFE526A6830800EE17BE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFE426A6830800EE17BE /* SignUpView.swift */; };
+		AAF0FFED26A6D6A500EE17BE /* VerficationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFEC26A6D6A500EE17BE /* VerficationView.swift */; };
+		AAF0FFEF26A71B6700EE17BE /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFEE26A71B6700EE17BE /* TestView.swift */; };
+		AAF0FFF126A71F1E00EE17BE /* VerifyCodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFF026A71F1E00EE17BE /* VerifyCodeField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA0D978026A8497800082A03 /* VerificationCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewModel.swift; sourceTree = "<group>"; };
+		AA0D978B26A8597600082A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0D978C26A859F700082A03 /* SubHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubHomeView.swift; sourceTree = "<group>"; };
 		AACDA27F26A49E3100779192 /* OnlineDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACDA28226A49E3100779192 /* OnlineDoctorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineDoctorApp.swift; sourceTree = "<group>"; };
 		AACDA28426A49E3100779192 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AACDA28626A49E3400779192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AACDA28926A49E3400779192 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AACDA28B26A49E3400779192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AACDA29C26A53E2D00779192 /* OnboardingViewPure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewPure.swift; sourceTree = "<group>"; };
 		AACDA29D26A53E2D00779192 /* OnboardingStepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
 		AACDA29E26A53E2D00779192 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
@@ -78,6 +87,10 @@
 		AAF0FFDB26A5A39700EE17BE /* LoginComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponent.swift; sourceTree = "<group>"; };
 		AAF0FFDE26A5A5D900EE17BE /* FingerPrintSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerPrintSheetView.swift; sourceTree = "<group>"; };
 		AAF0FFE226A5DFFA00EE17BE /* CustomCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleProgressView.swift; sourceTree = "<group>"; };
+		AAF0FFE426A6830800EE17BE /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AAF0FFEC26A6D6A500EE17BE /* VerficationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerficationView.swift; sourceTree = "<group>"; };
+		AAF0FFEE26A71B6700EE17BE /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		AAF0FFF026A71F1E00EE17BE /* VerifyCodeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +98,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0D978426A849A900082A03 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA0D977F26A8494100082A03 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA0D978026A8497800082A03 /* VerificationCodeViewModel.swift */,
+			);
+			name = "View Model";
+			path = "View/View Model";
+			sourceTree = "<group>";
+		};
 		AACDA27626A49E3100779192 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +133,7 @@
 		AACDA28126A49E3100779192 /* OnlineDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				AA0D977F26A8494100082A03 /* View Model */,
 				AACDA2D126A55BC800779192 /* Modifier */,
 				AACDA2CE26A553B400779192 /* View */,
 				AACDA2CB26A54E1200779192 /* extension */,
@@ -117,8 +141,8 @@
 				AACDA29326A4A01C00779192 /* Walkthrough */,
 				AACDA28226A49E3100779192 /* OnlineDoctorApp.swift */,
 				AACDA28426A49E3100779192 /* ContentView.swift */,
+				AA0D978B26A8597600082A03 /* Info.plist */,
 				AACDA28626A49E3400779192 /* Assets.xcassets */,
-				AACDA28B26A49E3400779192 /* Info.plist */,
 				AACDA28826A49E3400779192 /* Preview Content */,
 			);
 			path = OnlineDoctor;
@@ -183,7 +207,11 @@
 				AAF0FFDD26A5A5C700EE17BE /* Sheet View */,
 				AAF0FFDA26A5A34800EE17BE /* Component */,
 				AACDA2CF26A553D800779192 /* SignInView.swift */,
+				AAF0FFEC26A6D6A500EE17BE /* VerficationView.swift */,
+				AAF0FFEE26A71B6700EE17BE /* TestView.swift */,
+				AAF0FFE426A6830800EE17BE /* SignUpView.swift */,
 				AAF0FFD826A58E2900EE17BE /* HomeView.swift */,
+				AA0D978C26A859F700082A03 /* SubHomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				AAF0FFDB26A5A39700EE17BE /* LoginComponent.swift */,
+				AAF0FFF026A71F1E00EE17BE /* VerifyCodeField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -229,6 +258,9 @@
 			dependencies = (
 			);
 			name = OnlineDoctor;
+			packageProductDependencies = (
+				AA0D978326A849A900082A03 /* SwiftUIX */,
+			);
 			productName = OnlineDoctor;
 			productReference = AACDA27F26A49E3100779192 /* OnlineDoctor.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +288,9 @@
 				Base,
 			);
 			mainGroup = AACDA27626A49E3100779192;
+			packageReferences = (
+				AA0D978226A849A900082A03 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = AACDA28026A49E3100779192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -304,11 +339,17 @@
 				AAF0FFD926A58E2900EE17BE /* HomeView.swift in Sources */,
 				AACDA28526A49E3100779192 /* ContentView.swift in Sources */,
 				AACDA2D026A553D800779192 /* SignInView.swift in Sources */,
+				AAF0FFED26A6D6A500EE17BE /* VerficationView.swift in Sources */,
+				AAF0FFF126A71F1E00EE17BE /* VerifyCodeField.swift in Sources */,
 				AACDA2A026A53E2D00779192 /* OnboardingStepView.swift in Sources */,
 				AACDA29F26A53E2D00779192 /* OnboardingViewPure.swift in Sources */,
+				AAF0FFEF26A71B6700EE17BE /* TestView.swift in Sources */,
+				AA0D978D26A859F700082A03 /* SubHomeView.swift in Sources */,
+				AA0D978126A8497800082A03 /* VerificationCodeViewModel.swift in Sources */,
 				AAF0FFDC26A5A39700EE17BE /* LoginComponent.swift in Sources */,
 				AACDA2A126A53E2D00779192 /* OnboardingDataModel.swift in Sources */,
 				AACDA2D326A55C4000779192 /* TextFieldButton.swift in Sources */,
+				AAF0FFE526A6830800EE17BE /* SignUpView.swift in Sources */,
 				AACDA2CD26A54E2000779192 /* view.swift in Sources */,
 				AACDA28326A49E3100779192 /* OnlineDoctorApp.swift in Sources */,
 				AAF0FFE326A5DFFA00EE17BE /* CustomCircleProgressView.swift in Sources */,
@@ -501,6 +542,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA0D978226A849A900082A03 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/chr1s78/SwiftUIX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA0D978326A849A900082A03 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA0D978226A849A900082A03 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AACDA27726A49E3100779192 /* Project object */;
 }

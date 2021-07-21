@@ -68,7 +68,7 @@ struct OnboardingViewPure: View {
                 Spacer()
                 VStack {
                     self.progressView()
-                        .padding(.bottom, 20)
+                        .padding(.top, 60)
                     
                     HStack {
                         Button(action: doneFunction) {

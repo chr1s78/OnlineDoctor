@@ -35,9 +35,8 @@ struct OnboardingStepView: View {
            
             Spacer()
         }
-        
-    .padding()
-        .edgesIgnoringSafeArea(.all)
+        .padding()
+       // .edgesIgnoringSafeArea(.all)
     }
 }
 

@@ -18,6 +18,10 @@ extension View {
     func customFont(_ textStyle: UIFont.TextStyle) -> ModifiedContent<Self, CustomFont> {
         return modifier(CustomFont(textStyle: textStyle))
     }
+    
+    func CustomNavigationButtonStyle() -> ModifiedContent<Self, CustomNavigationButton> {
+        return modifier(CustomNavigationButton())
+    }
 }
 
 
@@ -44,12 +48,34 @@ struct CustomFont: ViewModifier {
     }
 }
 
+struct CustomNavigationButton: ViewModifier {
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
+    func body(content: Content) -> some View {
+        content
+          //  .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action : {
+                self.mode.wrappedValue.dismiss()
+            }){
+                Image("Back")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 38, height: 38, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .font(.system(size: 18, weight: .light))
+                    .foregroundColor(Color.black)
+            })
+    }
+}
+
 /// Define the custom fonts to use, depending on the TextStyle.
 typealias CustomFontDescription = (String, CGFloat)
 private var fontDescriptions: [UIFont.TextStyle: CustomFontDescription] = [
     .title1: ("Montserrat", 30),
     .headline: ("Montserrat", 25),
     .subheadline: ("Montserrat", 12),
+    .title2: ("Montserrat", 14),
 ]
 
 //typealias CustomFontDescription = (String, CGFloat)

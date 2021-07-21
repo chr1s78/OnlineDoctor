@@ -21,7 +21,8 @@ struct SignInView: View {
             GeometryReader { geometry in
                 ZStack {
                     
-                    Color(#colorLiteral(red: 0.9803921569, green: 0.9843137255, blue: 1, alpha: 1))
+                   // Color(#colorLiteral(red: 0.9803921569, green: 0.9843137255, blue: 1, alpha: 1))
+                    Color("background")
                         .edgesIgnoringSafeArea(.all)
                    
                     if fingerShow {
@@ -39,24 +40,19 @@ struct SignInView: View {
                         
                         HStack {
                             Spacer()
-                            Text("Forgot Password?")
-                                .fontWeight(.light)
-                                .customFont(.subheadline)
+                            NavigationLink(
+                                destination: SignUpView(),
+                                isActive: $navigateToHome,
+                                label: {
+                                    Text("Forgot Password?")
+                                        .fontWeight(.light)
+                                        .customFont(.subheadline)
+                                })
                         }
                         .frame(width: 305)
                         .padding(.top, 10)
                         
-                        /// Log in Button with arrwo
-                        LoginButtonView()
-                            .padding(.top, 100)
-                        
-                        /// divider with text
-                        DividerWithTextView(text: " Or Login With ")
-                            .padding(.top, 25)
-                        
-                        /// log in with google
-                        LoginWithGoogleButton()
-                            .padding(.top, 25)
+                        ComponentLoginButtonView(type: 0)
                         
                         /// Register tip info
                         HStack {
@@ -65,7 +61,9 @@ struct SignInView: View {
                                 .foregroundColor(Color(#colorLiteral(red: 0.2039215686, green: 0.2235294118, blue: 0.3960784314, alpha: 1)))
                             
                             NavigationLink(
-                                destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                                destination: SignUpView()
+                                    .navigationBarHidden(true)
+                                    .navigationBarBackButtonHidden(true),
                                 isActive: $navigateToHome,
                                 label: {
                                     Text("Register in here")
@@ -78,6 +76,7 @@ struct SignInView: View {
                         }
                         .padding(.top, 13)
                     }
+                  //  .background(Color.orange)
                     .blur(radius: fingerShow ? 8.0 : 0.0)
                     
                     FingerPrintSheetView(
@@ -89,45 +88,21 @@ struct SignInView: View {
                     }
                  //   .edgesIgnoringSafeArea(.all)
                 }
-                .navigationBarHidden(true)
+                //  .navigationBarHidden(true)
                 
             }
+            .CustomNavigationButtonStyle()
         }
        
     }
 }
 
-struct DividerWithTextView: View {
-    var text: String = ""
-    
-    var body: some View {
-        ZStack {
-            Divider()
-            
-            Text(text)
-                .fontWeight(.light)
-                .customFont(.subheadline)
-                .background(Color(#colorLiteral(red: 0.9803921569, green: 0.9843137255, blue: 1, alpha: 1)))
-        }
-        .frame(width: 305)
-    }
-}
 
-struct LoginButtonView: View {
-    var body: some View {
-        
-        NavigationLink(
-            destination: HomeView(),
-            label: {
-                LoginButton()
-            })
-        
-    }
-}
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()
+            .preferredColorScheme(.dark)
     }
 }
 
@@ -145,6 +120,8 @@ struct SigninHeaderView: View {
                     .fontWeight(.light)
                     .customFont(.subheadline)
             }
+            .fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+            .frame(idealWidth: UIScreen.main.bounds.width * 2 / 3 )
             .padding(30)
             
             Spacer()

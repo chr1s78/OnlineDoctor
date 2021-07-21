@@ -56,14 +56,16 @@ struct FingerPrintSheetView<Content: View>: View {
             VStack(alignment: .center, spacing: 0) {
                 self.indicator.padding(.bottom, 5)
                 FingerBodyView(fingerShow: $fingerShow, navigateToHome: $navigateToHome)
+                    .frame(height: self.maxHeight-20)
                     .clipShape(RoundedRectangle(cornerRadius: 38))
+                    
                 
             }
             .frame(width: geometry.size.width, height: self.maxHeight, alignment: .top)
                .background(Color.clear)
             .cornerRadius(Constants.radius)
-            .frame(height: geometry.size.height, alignment: .bottom)
-            .offset(y: fingerShow ? 0 : self.offset + self.translation + 40)
+            .frame(height: geometry.size.height , alignment: .bottom)
+            .offset(y: fingerShow ? 0 : self.offset + self.translation + 100)
             
             .animation(.interactiveSpring())
             .gesture(
@@ -112,7 +114,7 @@ struct FingerBodyView: View {
                     .background(
                         Circle()
                             .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .foregroundColor(Color(#colorLiteral(red: 0.8039215686, green: 0.9254901961, blue: 0.9176470588, alpha: 1)))
+                            .foregroundColor(Color("touchid"))
                             .background(
                                 Circle()
                                     .frame(width: 124, height: 124, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
