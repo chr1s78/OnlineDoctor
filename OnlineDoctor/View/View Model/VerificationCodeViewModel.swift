@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class FieldViewModel: ObservableObject {
-    @Published var f1: (String, Bool) = ("", true) {
+    @Published var f1: (String, Bool) = ("", false) {
         didSet {
             print("f1 set " + f1.1.description)
             print("f1 oldvalue " + oldValue.1.description)

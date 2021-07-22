@@ -54,7 +54,7 @@ struct CustomNavigationButton: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-          //  .navigationBarHidden(true)
+         //   .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {
                 self.mode.wrappedValue.dismiss()
@@ -76,6 +76,10 @@ private var fontDescriptions: [UIFont.TextStyle: CustomFontDescription] = [
     .headline: ("Montserrat", 25),
     .subheadline: ("Montserrat", 12),
     .title2: ("Montserrat", 14),
+    .title3: ("Montserrat", 18),
+    .caption1: ("Montserrat", 5),
+    .caption2: ("Montserrat", 8),
+    .callout: ("Montserrat", 10),
 ]
 
 //typealias CustomFontDescription = (String, CGFloat)

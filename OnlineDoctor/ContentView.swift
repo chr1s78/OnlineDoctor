@@ -19,8 +19,11 @@ struct ContentView: View {
                     self.onboardinDone = true
                     print("done onboarding")
                 })
+            //    .statusBar(hidden: true)
             } else {
                 SignInView()
+                    .navigationBarHidden(true)
+                //    .statusBar(hidden: /*@START_MENU_TOKEN@*/false/*@END_MENU_TOKEN@*/)
             }
         }
     }

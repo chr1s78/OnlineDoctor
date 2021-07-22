@@ -61,9 +61,7 @@ struct SignInView: View {
                                 .foregroundColor(Color(#colorLiteral(red: 0.2039215686, green: 0.2235294118, blue: 0.3960784314, alpha: 1)))
                             
                             NavigationLink(
-                                destination: SignUpView()
-                                    .navigationBarHidden(true)
-                                    .navigationBarBackButtonHidden(true),
+                                destination: SignUpView(),
                                 isActive: $navigateToHome,
                                 label: {
                                     Text("Register in here")
@@ -87,10 +85,10 @@ struct SignInView: View {
                         Color.blue
                     }
                  //   .edgesIgnoringSafeArea(.all)
-                }
-                //  .navigationBarHidden(true)
-                
+                }   
             }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarHidden(true)
             .CustomNavigationButtonStyle()
         }
        

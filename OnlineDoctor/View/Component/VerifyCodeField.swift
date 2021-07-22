@@ -16,7 +16,7 @@ struct VerifyCodeField: View {
     var body: some View {
         CocoaTextField("", text: $fIndex.0)
             .foregroundColor(Color(#colorLiteral(red: 0.3450980392, green: 0.3607843137, blue: 0.8980392157, alpha: 1)))
-            .isInitialFirstResponder(index==0 ? true : false)
+         //   .isInitialFirstResponder(index==0 ? true : false)
             .isFirstResponder(fIndex.1)
             .frame(width: 69, height: 50)
             .multilineTextAlignment(.center)

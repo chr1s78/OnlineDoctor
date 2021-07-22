@@ -57,17 +57,17 @@ struct VerficationView: View {
                         .alignmentGuide(.center, computeValue: { dimension in
                             142
                         })
-                    
+
                     HStack {
                         VerifyCodeField(index: 0, fIndex: $vm.f1)
                         VerifyCodeField(index: 1, fIndex: $vm.f2)
                         VerifyCodeField(index: 2, fIndex: $vm.f3)
                         VerifyCodeField(index: 3, fIndex: $vm.f4)
-                        
+
                     }
                     .font(.largeTitle, weight: .heavy)
-                    .keyboardType(.numberPad)
-                    
+                  //  .keyboardType(.numberPad)
+
                     Text("You can request the next code in 49 seconds")
                         .customFont(.subheadline)
                 }
@@ -75,7 +75,7 @@ struct VerficationView: View {
                 
                 if vm.code != "" && vm.code.count == 4 {
                     
-                    NavigationLink(destination: HomeView()) {
+                    NavigationLink(destination: HomeView().navigationBarHidden(true)) {
                         HStack {
                             Text("Verify and Create Account")
                                 .customFont(.subheadline)

@@ -260,8 +260,7 @@ struct LoginButtonView: View {
 struct NextButtonView: View {
     var body: some View {
         NavigationLink(
-            destination: VerficationView()
-               ,
+            destination: VerficationView(),
             label: {
                 NextButton()
             })
