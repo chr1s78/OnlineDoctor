@@ -49,18 +49,21 @@ struct backgroundView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: UIScreen.main.bounds.width, height: 84)
+                .background(Color("background"))
                 .scaledToFill()
         case 1:
             Image("Subtract2")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: UIScreen.main.bounds.width, height: 84)
+                .background(Color("background"))
                 .scaledToFill()
         default:
             Image("Subtract3")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: UIScreen.main.bounds.width, height: 84)
+                .background(Color("background"))
                 .scaledToFill()
         }
 
@@ -73,9 +76,9 @@ struct HomeView_Previews: PreviewProvider {
             .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
             .previewDisplayName("iPhone 11 Pro")
         
-        HomeView()
-            .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
-            .previewDisplayName("iPhone 11")
+//        HomeView()
+//            .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
+//            .previewDisplayName("iPhone 11")
     }
 }
 
@@ -93,6 +96,7 @@ struct TabbarItemCircleBackgroundView: View {
         Circle()
             .frame(width: radius, height: radius)
             .foregroundColor(Color("main"))
+          //  .background(Color.red)
     }
 }
 
@@ -170,6 +174,7 @@ struct CustomTabbarView: View {
             backgroundView(selectedIndex: $selectedIndex)
                 .animation(.spring())
         )
-        .frame(height: 85)
+        //.frame(height: 85)
+        
     }
 }

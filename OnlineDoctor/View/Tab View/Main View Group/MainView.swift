@@ -13,7 +13,9 @@ struct MainView: View {
     @State var searchText: String = ""
     
     var body: some View {
-        ZStack(alignment: .center) {
+        
+        NavigationView {
+            ZStack(alignment: .center) {
             
             Color("background").edgesIgnoringSafeArea(.all)
             
@@ -25,6 +27,7 @@ struct MainView: View {
                         
                         // Header Row view
                         MainHeaderView()
+                            .padding(.top, 20)
                         
                         // Search bar Row view
                         SearchBarRowView(searchText: $searchText)
@@ -45,14 +48,16 @@ struct MainView: View {
                 }
             }
         }
+            .navigationBarHidden(true)
+        }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-        YourAppointmentRowView()
-            .environmentObject(MainViewModel())
+      //  YourAppointmentRowView()
+      //      .environmentObject(MainViewModel())
     }
 }
 
@@ -66,20 +71,24 @@ struct MainHeaderView: View {
             
             Spacer()
             
+            NavigationLink(
+                destination: NotificationsView(),
+                label: {
+                    Image(systemName: "bell")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.black)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(Color(#colorLiteral(red: 0.3450980392, green: 0.3607843137, blue: 0.8980392157, alpha: 0.6379382405)))
+                                .frame(width: 38, height: 38)
+                            
+                        )
+                })
             
-            Image(systemName: "bell")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 20, height: 20)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(Color(#colorLiteral(red: 0.3450980392, green: 0.3607843137, blue: 0.8980392157, alpha: 1)))
-                        .frame(width: 38, height: 38)
-                    
-                )
         }
-        .padding(.top, 30)
     }
 }
 

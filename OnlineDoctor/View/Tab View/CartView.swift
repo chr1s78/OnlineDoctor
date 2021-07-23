@@ -9,7 +9,10 @@ import SwiftUI
 
 struct CartView: View {
     var body: some View {
-        Text("Cart View")
+        ZStack {
+            Color("background").edgesIgnoringSafeArea(.all)
+            Text("Cart View")
+        }
     }
 }
 
