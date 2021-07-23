@@ -76,9 +76,6 @@
 		AA173ED126AA9E2100EFCD07 /* NotificationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRowView.swift; sourceTree = "<group>"; };
 		AA173ED326AA9F5400EFCD07 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		AA173ED526AA9F7800EFCD07 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
-		AA69D1D326AAB68000DE1D88 /* 截屏2021-07-23 下午4.24.03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "截屏2021-07-23 下午4.24.03.png"; sourceTree = "<group>"; };
-		AA69D1D426AAB68000DE1D88 /* 截屏2021-07-23 下午4.24.11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "截屏2021-07-23 下午4.24.11.png"; sourceTree = "<group>"; };
-		AA69D1D526AAB68000DE1D88 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AA76D50E26A944CD00C18AEA /* ViewA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewA.swift; sourceTree = "<group>"; };
 		AA76D51026A944D600C18AEA /* ViewB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewB.swift; sourceTree = "<group>"; };
 		AA76D51226A944DD00C18AEA /* ViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewC.swift; sourceTree = "<group>"; };
@@ -192,9 +189,6 @@
 		AACDA27626A49E3100779192 = {
 			isa = PBXGroup;
 			children = (
-				AA69D1D326AAB68000DE1D88 /* 截屏2021-07-23 下午4.24.03.png */,
-				AA69D1D426AAB68000DE1D88 /* 截屏2021-07-23 下午4.24.11.png */,
-				AA69D1D526AAB68000DE1D88 /* README.md */,
 				AACDA28126A49E3100779192 /* OnlineDoctor */,
 				AACDA28026A49E3100779192 /* Products */,
 			);
