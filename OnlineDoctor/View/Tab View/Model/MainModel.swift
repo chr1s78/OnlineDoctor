@@ -14,6 +14,7 @@ struct DoctorSimpleInfo: Identifiable, Codable {
     let experience: Int
     let name: String
     let type: String
+    let address: String
 }
 
 struct UserAppointmentInfo: Identifiable, Codable {

@@ -103,17 +103,18 @@ struct SearchBarRowView: View {
                 .customFont(.title3)
                 .padding(.leading, -90)
             
-            HStack(spacing: 10) {
-                SearchBarView(placeholder: "Search a doctor", search: $searchText)
-                
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Image("searchbtn")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 50, height: 50)
-                })
+            NavigationLink(destination: SearchDoctorView()) {
+                HStack(spacing: 10) {
+                    SearchBarView(placeholder: "Search a doctor", search: $searchText)
+                    
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Image("searchbtn")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                    })
+                }
             }
-            
         }
         .frame(maxWidth: .infinity)
         .padding(.top, 35)
