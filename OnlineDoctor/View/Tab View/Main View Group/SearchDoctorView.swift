@@ -23,7 +23,6 @@ struct SearchDoctorView: View {
     
     var body: some View {
         ZStack {
-            
             Color("background").edgesIgnoringSafeArea(.all)
             
             VStack {
@@ -54,7 +53,7 @@ struct SearchDoctorView: View {
                 .padding(.top, 40)
                 Spacer()
             }
-            .frame(width: 305)
+            .frame(width: 304)
         }
         .navigationBarTitle("Find Your Doctor", displayMode: .inline)
         .CustomNavigationButtonStyle()
