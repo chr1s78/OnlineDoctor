@@ -7,6 +7,11 @@
 
 import Foundation
 
+/// Doctor Simple Info
+/// ```
+/// rating      : Double
+/// experience  : Int
+/// ````
 struct DoctorSimpleInfo: Identifiable, Codable {
     var id: Int
     let photo: String
@@ -15,6 +20,7 @@ struct DoctorSimpleInfo: Identifiable, Codable {
     let name: String
     let type: String
     let address: String
+    let date: Date
 }
 
 struct UserAppointmentInfo: Identifiable, Codable {

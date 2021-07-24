@@ -25,25 +25,37 @@ struct MainView: View {
                     Spacer()
                     VStack(alignment: .leading) {
                         
+                        VStack {
                         // Header Row view
                         MainHeaderView()
                             .padding(.top, 20)
                         
                         // Search bar Row view
                         SearchBarRowView(searchText: $searchText)
+                        }
+                        .frame(width: gtr.size.width - 60)
                         
+                        VStack {
                         // Doctor Scroll Row View
                         DoctorScrollView()
+                            .frame(maxWidth: .infinity)
                             .environmentObject(vm)
+                        }
+                      //  .frame(width: gtr.size.width - 60)
                         
+                        VStack {
                         // Your Appointment Row View
                         YourAppointmentRowView()
                             .environmentObject(vm)
                             .padding(.top , 30)
+                        }
+                        .frame(width: gtr.size.width - 60)
                         
                         Spacer()
                     }
-                    .frame(width: gtr.size.width - 60)
+                    .frame(maxWidth: .infinity)
+                    .offset(x: 20)
+                  //  .frame(width: gtr.size.width - 60)
                     Spacer()
                 }
             }
@@ -133,7 +145,7 @@ struct DoctorScrollView: View {
                 }
             }
         }
-     //   .padding(.leading, 35)
+        .frame(maxWidth: .infinity)
         .padding(.top, 15)
     }
 }
@@ -149,12 +161,16 @@ struct DoctorCellView: View {
                 .frame(width: 145, height: 215)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
             
-            VStack {
-                DoctorPhotoView(photo: data.photo, name: data.name, type: data.type)
-                
-                DoctorSimpleInfoView(rating: data.rating, experience: data.experience)
-            }
-            //  .padding(.bottom)
+            NavigationLink(
+                destination: DoctorDetailView(doctorInfo: data),
+                label: {
+                    VStack {
+                        DoctorPhotoView(photo: data.photo, name: data.name, type: data.type)
+                        
+                        DoctorSimpleInfoView(rating: data.rating, experience: data.experience)
+                    }
+                })
+            
         }
     }
 }
@@ -296,6 +312,7 @@ struct DoctorCardView: View {
                 .frame(width: 305, height: 150)
                 .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
                 .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 1)
+            
             VStack(spacing: 15) {
                 HStack {
                     Image("DoctorCard1")
@@ -329,6 +346,7 @@ struct DoctorCardView: View {
                         .frame(width: 104, height: 53)
                     
                 }
+               // .padding(.horizontal)
                 .frame(width: 265, height: 53)
                // .fixedSize()
                // .offset(y: -20)
@@ -349,6 +367,7 @@ struct DoctorCardView: View {
                 }
                 .customFont(.subheadline)
                 .frame(width: 274, height: 52)
+                .frame(height: 52)
                 .clipShape(RoundedRectangle(cornerRadius: 13))
                 .background(Color("field").opacity(0.1))
             }

@@ -56,6 +56,9 @@
 		AACDA2CD26A54E2000779192 /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACDA2CC26A54E2000779192 /* view.swift */; };
 		AACDA2D026A553D800779192 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACDA2CF26A553D800779192 /* SignInView.swift */; };
 		AACDA2D326A55C4000779192 /* TextFieldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACDA2D226A55C4000779192 /* TextFieldButton.swift */; };
+		AAD95F7526ABFAF3006935BD /* DoctorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD95F7426ABFAF3006935BD /* DoctorDetailView.swift */; };
+		AAD95F7726AC1309006935BD /* RateAndExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD95F7626AC1309006935BD /* RateAndExperience.swift */; };
+		AAD95F7926AC1682006935BD /* DoctorCardPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD95F7826AC1682006935BD /* DoctorCardPart.swift */; };
 		AAF0FFD926A58E2900EE17BE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFD826A58E2900EE17BE /* HomeView.swift */; };
 		AAF0FFDC26A5A39700EE17BE /* LoginComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFDB26A5A39700EE17BE /* LoginComponent.swift */; };
 		AAF0FFDF26A5A5D900EE17BE /* FingerPrintSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0FFDE26A5A5D900EE17BE /* FingerPrintSheetView.swift */; };
@@ -117,6 +120,9 @@
 		AACDA2CC26A54E2000779192 /* view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		AACDA2CF26A553D800779192 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		AACDA2D226A55C4000779192 /* TextFieldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldButton.swift; sourceTree = "<group>"; };
+		AAD95F7426ABFAF3006935BD /* DoctorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailView.swift; sourceTree = "<group>"; };
+		AAD95F7626AC1309006935BD /* RateAndExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAndExperience.swift; sourceTree = "<group>"; };
+		AAD95F7826AC1682006935BD /* DoctorCardPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCardPart.swift; sourceTree = "<group>"; };
 		AAF0FFD826A58E2900EE17BE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AAF0FFDB26A5A39700EE17BE /* LoginComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponent.swift; sourceTree = "<group>"; };
 		AAF0FFDE26A5A5D900EE17BE /* FingerPrintSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerPrintSheetView.swift; sourceTree = "<group>"; };
@@ -309,6 +315,7 @@
 				AA0D979B26A8A35200082A03 /* MainView.swift */,
 				AA69D1D626AAFEC000DE1D88 /* SearchDoctorView.swift */,
 				AA173ECF26AA9BE300EFCD07 /* NotificationsView.swift */,
+				AAD95F7426ABFAF3006935BD /* DoctorDetailView.swift */,
 			);
 			path = "Main View Group";
 			sourceTree = "<group>";
@@ -321,6 +328,8 @@
 				AA69D1D826AB08FD00DE1D88 /* SearchBar.swift */,
 				AA76D51626A9888000C18AEA /* SearchBarView.swift */,
 				AA173ED126AA9E2100EFCD07 /* NotificationRowView.swift */,
+				AAD95F7626AC1309006935BD /* RateAndExperience.swift */,
+				AAD95F7826AC1682006935BD /* DoctorCardPart.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -427,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD95F7726AC1309006935BD /* RateAndExperience.swift in Sources */,
 				AA76D50F26A944CD00C18AEA /* ViewA.swift in Sources */,
 				AA0D97A226A8AD7A00082A03 /* TabbackgroundView.swift in Sources */,
 				AA76D51326A944DD00C18AEA /* ViewC.swift in Sources */,
@@ -450,6 +460,7 @@
 				AA0D979E26A8A3E200082A03 /* CartView.swift in Sources */,
 				AA0D978126A8497800082A03 /* VerificationCodeViewModel.swift in Sources */,
 				AA173ED226AA9E2100EFCD07 /* NotificationRowView.swift in Sources */,
+				AAD95F7526ABFAF3006935BD /* DoctorDetailView.swift in Sources */,
 				AAF0FFDC26A5A39700EE17BE /* LoginComponent.swift in Sources */,
 				AACDA2A126A53E2D00779192 /* OnboardingDataModel.swift in Sources */,
 				AACDA2D326A55C4000779192 /* TextFieldButton.swift in Sources */,
@@ -460,6 +471,7 @@
 				AACDA28326A49E3100779192 /* OnlineDoctorApp.swift in Sources */,
 				AAF0FFE326A5DFFA00EE17BE /* CustomCircleProgressView.swift in Sources */,
 				AA0D97A026A8A40000082A03 /* AppointmentView.swift in Sources */,
+				AAD95F7926AC1682006935BD /* DoctorCardPart.swift in Sources */,
 				AAF0FFDF26A5A5D900EE17BE /* FingerPrintSheetView.swift in Sources */,
 				AA69D1D726AAFEC100DE1D88 /* SearchDoctorView.swift in Sources */,
 			);
